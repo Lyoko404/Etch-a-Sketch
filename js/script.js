@@ -1,38 +1,44 @@
 const container = document.querySelector('#container');
-container.style.width = `${16 * 16}px`;
-container.style.height = `${16 * 16}px`;
 
-const div = document.createElement('div');
-div.style.width = '16px';
-div.style.height = '16px';
-div.classList.toggle('blue');
+const square = document.createElement('div');
+square.classList.add('square');
 
-const fragment = new DocumentFragment();
-
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
-        const divSquare = div.cloneNode(true);
-
-        fragment.append(divSquare);
-    }
-}
-
-container.append(fragment);
-
+container.append(square);
 
 container.addEventListener('mouseover', (e) => {
-
     const changeElement = e.target;
 
-    if (changeElement.classList.contains('blue')) {
-        changeElement.classList.add('red'); 
-    }
+    changeElement.style.backgroundColor = 'white';
 })
 
-// container.addEventListener('mouseout', (e) => {
+// const container = document.querySelector('#container');
+// container.style.width = `${100 * 100}px`;
+// container.style.height = `auto`;
+
+// const div = document.createElement('div');
+// div.style.width = '16px';
+// div.style.height = '16px';
+// div.classList.toggle('blue');
+// div.classList.toggle('pixle');
+
+// const fragment = new DocumentFragment();
+
+// for (let i = 0; i < 20; i++) {
+//     for (let j = 0; j < 20; j++) {
+//         const divSquare = div.cloneNode(true);
+
+//         fragment.append(divSquare);
+//     }
+// }
+
+// container.append(fragment);
+
+
+// container.addEventListener('mouseover', (e) => {
+
 //     const changeElement = e.target;
 
-//     if (changeElement.classList.contains('red')) {
-//         changeElement.classList.toggle('blue');
+//     if (changeElement.classList.contains('blue')) {
+//         changeElement.classList.add('red'); 
 //     }
 // })
