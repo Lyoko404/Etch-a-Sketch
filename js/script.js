@@ -10,6 +10,10 @@ function defaultGrid () {
 btn.addEventListener('click', () => {
     let custom = Number(prompt("Enter a number"));
 
+    if (custom < 0 || custom > 100) {
+        alert('Number must be under 100 and over 0');
+    }
+
     container.textContent = '';
 
     customGrid = showGrid(custom);
