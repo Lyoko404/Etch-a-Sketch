@@ -1,18 +1,27 @@
 * {
+    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+
+    margin: 10px;
+}
+
 #container {
-    width: 400px;
-    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
 
     margin: auto;
     border: 1px solid red;
 }
 
 .square {
+    box-sizing: border-box;
     background-color: black;
-    width: 16px;
-    height: 16px;
 }
